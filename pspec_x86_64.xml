@@ -2,10 +2,10 @@
     <Source>
         <Name>librepo</Name>
         <Packager>
-            <Name>Peter O&apos;Connor</Name>
-            <Email>peter@solus-project.com</Email>
+            <Name>Bryan T. Meyers</Name>
+            <Email>bmeyers@datadrake.com</Email>
         </Packager>
-        <License>LGPL-2.1</License>
+        <License>LGPL-2.1-or-later</License>
         <PartOf>programming.library</PartOf>
         <Summary xml:lang="en">Repodata downloading library</Summary>
         <Description xml:lang="en">A library providing C and Python (libcURL like) API to
@@ -23,7 +23,7 @@ downloading repository metadata.
         <Files>
             <Path fileType="library">/usr/lib/python3.6/site-packages/librepo/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.6/site-packages/librepo/_librepo.so</Path>
-            <Path fileType="library">/usr/lib64/lib*.so.*</Path>
+            <Path fileType="library">/usr/lib64/librepo.so.0</Path>
         </Files>
     </Package>
     <Package>
@@ -34,21 +34,43 @@ downloading repository metadata.
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="2">librepo</Dependency>
+            <Dependency release="3">librepo</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="header">/usr/include/</Path>
-            <Path fileType="library">/usr/lib64/lib*.so</Path>
-            <Path fileType="data">/usr/lib64/pkgconfig/*.pc</Path>
+            <Path fileType="header">/usr/include/librepo/checksum.h</Path>
+            <Path fileType="header">/usr/include/librepo/downloader.h</Path>
+            <Path fileType="header">/usr/include/librepo/downloader_internal.h</Path>
+            <Path fileType="header">/usr/include/librepo/downloadtarget.h</Path>
+            <Path fileType="header">/usr/include/librepo/fastestmirror.h</Path>
+            <Path fileType="header">/usr/include/librepo/gpg.h</Path>
+            <Path fileType="header">/usr/include/librepo/handle.h</Path>
+            <Path fileType="header">/usr/include/librepo/librepo.h</Path>
+            <Path fileType="header">/usr/include/librepo/metadata_downloader.h</Path>
+            <Path fileType="header">/usr/include/librepo/metalink.h</Path>
+            <Path fileType="header">/usr/include/librepo/mirrorlist.h</Path>
+            <Path fileType="header">/usr/include/librepo/package_downloader.h</Path>
+            <Path fileType="header">/usr/include/librepo/rcodes.h</Path>
+            <Path fileType="header">/usr/include/librepo/repoconf.h</Path>
+            <Path fileType="header">/usr/include/librepo/repomd.h</Path>
+            <Path fileType="header">/usr/include/librepo/repoutil_yum.h</Path>
+            <Path fileType="header">/usr/include/librepo/result.h</Path>
+            <Path fileType="header">/usr/include/librepo/types.h</Path>
+            <Path fileType="header">/usr/include/librepo/url_substitution.h</Path>
+            <Path fileType="header">/usr/include/librepo/util.h</Path>
+            <Path fileType="header">/usr/include/librepo/version.h</Path>
+            <Path fileType="header">/usr/include/librepo/xmlparser.h</Path>
+            <Path fileType="header">/usr/include/librepo/yum.h</Path>
+            <Path fileType="library">/usr/lib64/librepo.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/librepo.pc</Path>
         </Files>
     </Package>
     <History>
-        <Update release="2">
-            <Date>2018-01-30</Date>
-            <Version>1.8.1</Version>
+        <Update release="3">
+            <Date>2018-12-29</Date>
+            <Version>1.9.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Peter O&apos;Connor</Name>
-            <Email>peter@solus-project.com</Email>
+            <Name>Bryan T. Meyers</Name>
+            <Email>bmeyers@datadrake.com</Email>
         </Update>
     </History>
 </PISI>
